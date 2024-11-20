@@ -1,0 +1,125 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body, main, html{
+    /* height: 100vh;
+    width: 100vw; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.top{
+    width: 100%;
+    min-height: 60vh;
+    background-image: url(bg-top.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.top .cvr{
+    position: relative;
+    background-color: #00000065;
+    min-height: inherit;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.top .cvr .txt h1{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap; 
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    /* letter-spacing: .10em; Adjust as needed */
+    animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+
+
+.bottom{
+    width: 100%;
+    min-height: 40vh;
+}
+
+
+.card{
+    display: flex;
+    padding: 30px 20px;
+    min-height: 20vh;
+}
+
+.card .left{
+    width: 30%;
+    min-height: inherit;
+    /* border: 2px solid saddlebrown; */
+}
+
+.img img{
+    /* object-fit: cover; */
+    width: 90%;
+    height: 90%;
+}
+
+.img {
+    text-align: center;
+}
+
+.card .right{
+    /* border: 2px solid black; */
+    width: 70%;
+    min-height: inherit;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+@media (max-width:1500px){
+    .img img{
+        width: 90%;
+        height: 300px;
+    }
+}
+
+@media (max-width: 850px){
+    .top .cvr .txt h1{
+        font-size: 15px;
+    }
+    .card{
+        flex-direction: column;
+    }
+    .card .left{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .card .right{
+        width: 100%;
+    }
+    .img img{
+        object-fit: contain;
+    }
+}
+
+.bdr{
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.414);
+    margin: 5px;
+}
